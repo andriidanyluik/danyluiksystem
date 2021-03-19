@@ -1,0 +1,280 @@
+
+{% extends 'blog/base.html' %}
+
+
+
+
+{% block content %}
+
+
+<!--
+<div class="container-xl">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 95vh; min-height: 600px;">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+        <img src="static/img/slide1.png" class="d-block w-100" alt="Сайт">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Розробка сайтів</h1>
+            <p> З супроводом</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Зворотній зв'язок</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/slide1.png" class="d-block w-100" alt="Боти">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Розробка Телеграм, Вайбер ботів</h1>
+            <p>Парсинг, Аналіз даних</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Зворотній зв'язок</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/slide1.png" class="d-block w-100" alt="Інше">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>Наш Блог</h1>
+            <p> Корисні поради</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Перейти</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</div>
+-->
+
+
+
+<div class="swiper-container home-slider" style="height: 70vh; min-height: 600px;">
+      <!-- Additional required wrapper-->
+      <div class="swiper-wrapper">
+        <!-- Slides-->
+        <div class="swiper-slide bg-cover bg-cover-right" style="background-image: url('https://www.mo.agency/hubfs/So%20you%20want%20to%20be%20a%20web%20developer.png');">
+
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Розробка Веб Сайтів</p>
+                <h2 class="display-1 mb-3 text-light" style="line-height: 1">Сайт &amp; Боти</h2>
+                <p class="text-muted mb-5 text-light">Детальна інформація про нас.</p><a class="btn btn-light" href="#">Дізнатись більше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 justify-content-center align-items-center text-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Чому Вам потрібен сайт?</p>
+                <h2 class="display-1 mb-3 text-light" style="line-height: 1">Блог</h2><a class="btn btn-light" href="{% url 'post_admin' %}">Перейти в блог</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6 offset-lg-">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light mb-4">Andrii Danyluik</p>
+                <h2 class="display-1 mb-5 text-light" style="line-height: 1">Розробник</h2><a class="btn btn-light" href="#">Перейти</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination "></div>
+      <div class="swiper-nav d-none d-lg-block  ">
+        <div class="swiper-button-prev " id="homePrev" style="background-color: white;"></div>
+        <div class="swiper-button-next" id="homeNext" style="background-color: white;"></div>
+      </div>
+    </div>
+
+
+<div class="container-fluid container-fluid-px py-6">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 text-center mx-auto">
+          <h2 class="display-3 mb-5">Створити недорогий сайт у Львові</h2>
+          <p class="lead text-muted mb-6">Наша команда молодих, енергійних і креативних людей, пропонує повний цикл розробки, супроводу, розгортання наших продуктів від особистих односторінкових сайтів і великих інтернет магазинів до сервісів обміну даних та автоматизації бізнес процесів.</p>
+        </div>
+      </div>
+      <div class="container py-6">
+      <h3 class="text-uppercase text-dark letter-spacing-3 mb-3">Створити Веб-сайт</h3>
+        <p class="lead text-muted mb-4">Створення сайту у Львові компанією DanyluikSystem, стане для Вас не лише вигідним, але й приємним, бо ціни у нас набагато нижчі ніж у конкурентів, як і більшість компаній, створюючи для кожного нашого клієнта максимально зручні умови співпраці.</p>
+        <p class="lead text-muted mb-5">У більшості компаній ви зустрінете невимовно високі ціни на створення інтернет сайту, але натомість не отримаєте чогось особливого,а часто не задовільнять ваші очікування, проте ми компанія, яка лише розвивається і пропонує дуже вигідні умови співпраці.</p>
+
+        <h4 class="text-uppercase text-dark letter-spacing-3 mb-3">Що в себе включає процес розробки?</h4>
+
+        <ul class="lead text-muted mb-4">
+             <li>Аналіз і проектування</li>
+             <li>Спрямованість на результат</li>
+             <li>Дизайн і Розробка</li>
+             <li>Унікальний дизайн і чистий код</li>
+             <li>Тестування і Старт</li>
+             <li>Навчання, підтримка та гарантії</li>
+      </ul>
+</div>
+
+
+
+<div class="container-fluid container-fluid-px py-6">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 text-center mx-auto">
+          <h2 class="display-3 mb-5">Наш Продукт</h2>
+          <p class="lead text-muted mb-6">Детально про те що ми вам пропонуємо за двома категоріями</p>
+        </div>
+      </div>
+
+
+
+ <div class="bg-gray-100 position-relative">
+      <div class="container py-6">
+        <div class="row">
+          <div class="col-sm-6 mb-5 mb-sm-0">
+            <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center"><img class="card-img img-scale" src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Card image">
+              <div class="card-img-overlay d-flex align-items-center">
+                <div class="w-100 py-3">
+                  <h2 class="display-3 font-weight-bold mb-0">Веб сайт</h2><a class="stretched-link" href="{% url 'website' %}"><span class="sr-only">See </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-5 mb-sm-0">
+            <div class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center"><img class="card-img img-scale" src="https://m.netinfo.bg/media/images/39852/39852272/991-ratio-it-programist.jpg" alt="Card image">
+              <div class="card-img-overlay d-flex align-items-center">
+                <div class="w-100 py-3">
+                  <h2 class="display-3 font-weight-bold mb-0">Сервіси обміну даних</h2><a class="stretched-link" href="{% url 'myservice' %}"><span class="sr-only">See </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+      <div class="py-6 bg-cover bg-cover-right" style="background-image: url(https://www.impactbnd.com/hubfs/3-ways-to-optimize-site-without-developer.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-xl-6">
+            <p class="subtitle mb-3 text-danger">Промоція тижня</p>
+            <h3 class="h1 text-light">Особистий блог</h3>
+            <p class="text-muted">
+              <del class="mr-3">$129.00</del><span>$79.00</span>
+            </p>
+            <p class="mb-4"><span class="badge badge-danger p-3">$50 off</span></p>
+            <div class="bg-white px-5 py-4 shadow mb-4" id="countdown">
+              <div class="row justify-content-between">
+                <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                  <h6 class="h4 mb-2 days">14</h6><span class="text-muted">days</span>
+                </div>
+                <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                  <h6 class="h4 mb-2 hours">22</h6><span class="text-muted">hours</span>
+                </div>
+                <div class="col-6 col-sm-3 text-center">
+                  <h6 class="h4 mb-2 minutes">16</h6><span class="text-muted">minutes</span>
+                </div>
+                <div class="col-6 col-sm-3 text-center">
+                  <h6 class="h4 mb-2 seconds">15</h6><span class="text-muted">seconds</span>
+                </div>
+              </div>
+            </div>
+            <p><a class="btn btn-outline-light" href="#">Замовити зараз</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<div class="py-5 py-lg-6 bg-gray-100">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-xl py-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#delivery-time-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-lg mb-1">Безкоштовна документація &amp; доопрацювання</h6>
+                <p class="text-muted font-weight-light text-lg mb-0">Після 100$</p>
+              </div>
+            </div>
+            <div class="col-xl  py-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#money-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-lg mb-1">Гарнатоване повернення коштів</h6>
+                <p class="text-muted font-weight-light text-lg mb-0">30 денне повернення коштів</p>
+              </div>
+            </div>
+            <div class="col-xl py-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#special-price-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-lg mb-1">найкраща ціна</h6>
+                <p class="text-muted font-weight-light text-lg mb-0">Індивідуальний підхід</p>
+              </div>
+            </div>
+            <div class="col-xl py-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#customer-support-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-lg mb-1">020-800-456-747</h6>
+                <p class="text-muted font-weight-light text-lg mb-0">24/7 Круглодобова підтримка</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+<p>Сьогодні нас відвідали {{ num_visits }}{% if num_visits == 1 %} разів{% else %} разів{% endif %}.</p>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

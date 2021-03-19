@@ -1,0 +1,73 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="swiper-container home-slider" style="height: 70vh; min-height: 600px;">
+      <!-- Additional required wrapper-->
+      <div class="swiper-wrapper">
+        <!-- Slides-->
+        <div class="swiper-slide bg-cover bg-cover-right" style="background-image: url('https://www.mo.agency/hubfs/So%20you%20want%20to%20be%20a%20web%20developer.png');">
+
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Розробка Веб Сайтів</p>
+                <h2 class="display-1 mb-3 text-light" style="line-height: 1">Сайт &amp; Боти</h2>
+                <p class="text-muted mb-5 text-light">Детальна інформація про нас.</p><a class="btn btn-light" href="#">Дізнатись більше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 justify-content-center align-items-center text-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Чому Вам потрібен сайт?</p>
+                <h2 class="display-1 mb-3 text-light" style="line-height: 1">Блог</h2><a class="btn btn-light" href="{% url 'post_admin' %}">Перейти в блог</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6 offset-lg-">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light mb-4">Andrii Danyluik</p>
+                <h2 class="display-1 mb-5 text-light" style="line-height: 1">Розробник</h2><a class="btn btn-light" href="#">Перейти</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination "></div>
+      <div class="swiper-nav d-none d-lg-block  ">
+        <div class="swiper-button-prev " id="homePrev" style="background-color: white;"></div>
+        <div class="swiper-button-next" id="homeNext" style="background-color: white;"></div>
+      </div>
+    </div>
+
+
+ <div class="container py-6">
+      <h3 class="text-uppercase text-dark letter-spacing-3 mb-3">Що ми вміємо?</h3>
+     <h4 class="text-uppercase text-dark letter-spacing-3 mb-3">Інтернет-магазин</h4>
+      <p class="lead text-muted mb-4">Розробка інтернет-магазину в DanyluikSystem гарантує: зрозумілу концепцію, лаконічний дизайн, комфортну навігацію та архітектуру, якісний код.</p>
+      <p class="lead text-muted mb-5">Варто підкреслити, що ціни на інтернет-магазин у нас на порядок нижчі конкурентів, при цьому на якість це ніяк не впливає, адже ми віддані своїй справі та клієнтам. Тому якщо Ви надалі в пошуках недорогого рішення для створення онлайн порталу, так, щоб ціна питання була доступно., Ви прийшли точно за адресою. Тож, поспішайте скористатись можливістю замовити свій власний онлайн торговий сервіс уже зараз.</p>
+
+     <h4 class="text-uppercase text-dark letter-spacing-3 mb-3">Лендінг-Пейдж</h4>
+      <p class="lead text-muted mb-4">Для чого потрібен лендінг-пейдж. Це сторінка для користувачів, які у переважній більшості  переходять за рекламою. Створюються такі ресурси з певними правилами, які націлені на своєрідне заохочення потенційних клієнтів придбати як найбільше товарів чи послуг. Тому такі Інтернет сторінки подають у яскравій, легко нав’язливій, і головне – в обґрунтованій формі, де розповідають користувачам про продукт чи послугу, Переконуючи клієнта придбати цей товару чи послуги. Саме тому, на таких сторінках використовують заклики чи інші інструменти, які  переконують відвідувача про те, що саме тут і зараз необхідно зробити замовлення.</p>
+      <p class="lead text-muted mb-5">Ефективність продажів на таких ресурсах  більша десь на 10-30%, ніж, у звичайного Інтернет магазину. Що, не може не тішити керівництво компанії.</p>
+     <p class="lead text-muted mb-5">Від 150$</p>
+
+     <h4 class="text-uppercase text-dark letter-spacing-3 mb-3">Сайт-Візитка</h4>
+      <p class="lead text-muted mb-4">Сайт-візитка–Це ідеальний варіант, якщо ваша компанія змінить місце дислокації, то клієнт завжди може зв’язатись з компанією, оскільки ви будете доступні онлайн 24\7.Уся необхідна інформація, яка має бути веб-сторінці є обмежена окремими відомостям: Інформацію про компанію.
+      </p><ul class="lead text-muted mb-4">
+   <li>Опис товарів чи послуг.</li>
+     <li>Прайс.</li>
+     <li>Карту проїзду.</li>
+     <li> Контактна інформація.</li></ul>
+      <p class="lead text-muted mb-5">Розробка і впровадження сайту візитки займає не багато часу, а варіант власного веб-порталу перевершить усі Ваші очікування. При цьому ціна на створення сайту-візитки є набагато нижча нас ніж у конкурентів.</p>
+<p class="lead text-muted mb-5">Від 50$</p>
+ <h4 class="text-uppercase text-dark letter-spacing-3 mb-3">Корпоративний сайт</h4>
+      <p class="lead text-muted mb-4">Чим відрізняється створення корпоративного сайту від інших</p>
+      <p class="lead text-muted mb-5">Часто їх плутають із інтернет-магазинами, онлайн-каталогами чи презентаційними сайтами. Інколи компанії вважають їх непотрібними чи некорисними. Насправді – сайти такого формату є повноцінним представництвом вашої компанії у мережі. Ваш портал буде містити увесь обсяг інформації про організацію та сферу її діяльності, асортимент продукції і послуг.</p>
+<p class="lead text-muted mb-5">Від 100$</p>
+ </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post_program">
+        {% if post_pg.published_date %}
+            <div class="date">
+                {{ post_pg.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post_pg.title }}</h1>
+        <p>{{ post_pg.text|linebreaksbr }}</p>
+    </div>
+<hr>
+{% if leave_comment_pg_list %}
+    {% for c in leave_comment_pg_list %}
+        <p>
+            <strong>{{c.author_name}}</strong>
+            <p>{{c.comment_text}}</p>
+        </p>
+        
+    {% endfor %}
+{% else %}
+Коментарів немає!
+{% endif %}
+<hr>
+
+<form action="/leave_comment_pg/" method="POST">
+
+	{% csrf_token %}
+	
+	<input type="text" required placeholder ="Ваше ім'я" name="name"><br>
+	<textarea name="text" required="" placeholder="Текст коментаря" cols="30" rows="10"></textarea><br>
+
+	<button type="submit">Залишити коментар</button>
+
+</form>
+{% endblock %}

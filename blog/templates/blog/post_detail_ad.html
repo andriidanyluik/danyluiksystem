@@ -1,0 +1,61 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="swiper-container home-slider" style="height: 70vh; min-height: 600px;">
+      <!-- Additional required wrapper-->
+      <div class="swiper-wrapper">
+        <!-- Slides-->
+        <div class="swiper-slide bg-cover bg-cover-right" style="background-image: url('https://www.mo.agency/hubfs/So%20you%20want%20to%20be%20a%20web%20developer.png');">
+
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Розробка Веб Сайтів</p>
+                <h2 class="display-1 mb-3 text-light" style="line-height: 1">Сайт &amp; Боти</h2>
+                <p class="text-muted mb-5 text-light">Детальна інформація про нас.</p><a class="btn btn-light" href="#">Дізнатись більше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 justify-content-center align-items-center text-center" data-swiper-parallax="-500">
+              <div class="col-lg-6">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light">Чому Вам потрібен сайт?</p>
+                <h2 class="display-1 mb-3 text-light" style="line-height: 1">Блог</h2><a class="btn btn-light" href="{% url 'post_admin' %}">Перейти в блог</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide bg-cover" style="background-image: url('https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+          <div class="container-fluid px-lg-6 px-xl-7 h-100">
+            <div class="row h-100 align-items-center" data-swiper-parallax="-500">
+              <div class="col-lg-6 offset-lg-">
+                <p class="subtitle letter-spacing-3 mb-3 text-light font-weight-light mb-4">Andrii Danyluik</p>
+                <h2 class="display-1 mb-5 text-light" style="line-height: 1">Розробник</h2><a class="btn btn-light" href="#">Перейти</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination "></div>
+      <div class="swiper-nav d-none d-lg-block  ">
+        <div class="swiper-button-prev " id="homePrev" style="background-color: white;"></div>
+        <div class="swiper-button-next" id="homeNext" style="background-color: white;"></div>
+      </div>
+    </div>
+
+    <div class="post_admin">
+        {% if post_ad.published_date %}
+            <div class="date">
+                {{ post_ad.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post_ad.title }}</h1>
+        <p>{{ post_ad.text|linebreaksbr }}</p>
+    </div>
+
+
+
+
+{% endblock %}
